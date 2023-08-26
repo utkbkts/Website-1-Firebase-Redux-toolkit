@@ -1,0 +1,80 @@
+@media (max-width: 892px) {
+  .navbar ul {
+    flex-direction: column;
+    position: absolute;
+    right: 40%;
+    top: 30%;
+    z-index: 101;
+  }
+  .navbar .hamburger{
+   display: block;
+  }
+
+  .navbar ul.active{
+    display: none;
+  }
+  .navbar ul li{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar ul li .exit{
+    font-size: 15px !important;
+  }
+
+  .navbar ul li a,button{
+    color: white !important;
+    font-size: 30px !important;
+  }
+  .navbar .register,.login{
+    border: 1px solid rgb(172, 177, 164);
+
+  }
+  
+  .navbar .backgroundnavbar {
+    position: fixed;
+    background: #272829;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+   
+  }
+  .navbar .backgroundnavbar.active{
+    display: none;
+  }
+}
+.hamburger{
+  display: none;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  z-index: 102;
+  transition: .5s all;
+
+}
+.hamburger .bar,.hamburger::after,.hamburger::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  margin: 6px 0px;
+  transition: .5s all;
+}
+.hamburger.active::before {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.hamburger.active::after {
+  transform: rotate(45deg) translate(-8px, -9px);
+}
+.hamburger.active .bar{
+  opacity: 0;
+}
