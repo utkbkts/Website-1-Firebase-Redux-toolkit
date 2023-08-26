@@ -61,7 +61,7 @@ const Navbar = () => {
         </li>
         {user ? (
           <>
-            <li>
+            <li className="exit-gap">
               <span>Hoş Geldin, {user.displayName}</span>
               <button className="exit" onClick={onlogout}>Çıkış</button>
             </li>

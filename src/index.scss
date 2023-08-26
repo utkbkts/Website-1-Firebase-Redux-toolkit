@@ -135,6 +135,10 @@ body{
   background-color: rgb(94, 98, 116);
   padding: 10px;
 
+  .exit-gap{
+    gap: 1rem;
+    display: flex;
+  }
 
   .register,.login{
     a{
