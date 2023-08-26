@@ -18,6 +18,9 @@ const Navbar = () => {
     await dispatch(reset());
     navigate("/login");
   };
+  const closeNavbar = () => {
+    sethamburg(false);
+  };
   const toggleHamburger = () => {
     sethamburg(!hamburg);
   };
@@ -33,6 +36,8 @@ const Navbar = () => {
         setGreeting("İyi Akşamlar :)");
       }
     };
+ 
+  
     updateGreeting();
 
     const interval = setInterval(updateGreeting, 1000 * 60 * 60); // Her saat başında güncelle
@@ -51,28 +56,28 @@ const Navbar = () => {
       <div className={`backgroundnavbar ${hamburg ? "" : "active"}`}></div>
       <ul className={`${hamburg ? "" : "active"}`}>
         <li>
-          <Link to="/portfoy">Portfolyo</Link>
+          <Link  onClick={closeNavbar}  to="/portfoy">Portfolyo</Link>
         </li>
         <li>
-          <Link to="/contact">İletişim</Link>
+          <Link onClick={closeNavbar} to="/contact">İletişim</Link>
         </li>
         <li>
-          <Link to="/about">Hakkımda</Link>
+          <Link  onClick={closeNavbar}  to="/about">Hakkımda</Link>
         </li>
         {user ? (
           <>
             <li className="exit-gap">
               <span>Hoş Geldin, {user.displayName}</span>
-              <button className="exit" onClick={onlogout}>Çıkış</button>
+              <button  className="exit" onClick={onlogout}>Çıkış</button>
             </li>
           </>
         ) : (
           <>
             <li className="register">
-              <Link to="/register">Üye ol</Link>
+              <Link  onClick={closeNavbar}  to="/register">Üye ol</Link>
             </li>
             <li className="login">
-              <Link to="/login">Giriş Yap</Link>
+              <Link  onClick={closeNavbar}  to="/login">Giriş Yap</Link>
             </li>
           </>
         )}
