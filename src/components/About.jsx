@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Transition from './Transition'
 import CV from "./CV.png"
+import "../components/responsive/About.css"
 const About = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrolled2, setIsScrolled2] = useState(false);

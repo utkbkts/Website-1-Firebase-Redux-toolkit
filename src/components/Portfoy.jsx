@@ -1,7 +1,7 @@
 import React from 'react'
 import Transition from './Transition'
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import "../components/responsive/Portfoy.css"
 import 'swiper/css';
 import 'swiper/css/pagination';
 

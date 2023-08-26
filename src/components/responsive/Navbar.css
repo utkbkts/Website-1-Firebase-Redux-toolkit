@@ -2,7 +2,7 @@
   .navbar ul {
     flex-direction: column;
     position: absolute;
-    right: 40%;
+    right: 33%;
     top: 30%;
     z-index: 101;
   }

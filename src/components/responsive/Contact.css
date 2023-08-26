@@ -1,0 +1,16 @@
+@media(max-width:630px){
+    .contact-form{
+        width: 100% !important;
+    }
+    .contact-form textarea{
+        width: 100% !important;
+    }
+    .contact-form button{
+        font-size: 13px !important;
+    }
+}
+@media(max-width:762px){
+    .contact-form button{
+        font-size: 13px !important;
+    }
+}

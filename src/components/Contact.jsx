@@ -3,7 +3,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
 import { toast } from "react-toastify";
 import Transition from './Transition';
-
+import "../components/responsive/Contact.css"
 const Contact = () => {
   const [text, setText] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
