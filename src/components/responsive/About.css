@@ -21,4 +21,11 @@
     .about-right,.about-rightt img{
         transform: scale(0.8) rotate(15deg) !important;
     }
+    .about-rightt.active{
+        transform: translateX(0) !important;
+    }
+    .about-rightt.inresposive{
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }
 }

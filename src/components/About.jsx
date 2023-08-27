@@ -6,11 +6,13 @@ const About = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrolled2, setIsScrolled2] = useState(false);
   const [isScrolled3, setIsScrolled3] = useState(false);
+  const [isScrolled4, setIsScrolled4] = useState(false);
     useEffect(() => {
       const handleScroll = () => {
         setIsScrolled(window.scrollY > 500);
         setIsScrolled2(window.scrollY > 700);
         setIsScrolled3(window.scrollY < 700);
+        setIsScrolled4(window.scrollY > 500);
       };
   
       window.addEventListener("scroll", handleScroll);
@@ -45,7 +47,7 @@ const About = () => {
           <h2>Daha Geniş Bir Bilgi İçin <br /><span>Ana sayfa'dan PDF halinde indirebilirsiniz.</span></h2>
         </div>
         </div>
-        <div className={`about-rightt ${isScrolled3?"active":""}`}>
+        <div className={`about-rightt ${isScrolled3?"active":""} ${isScrolled4?"inresposive":""}`}>
           <img src={CV} alt="" />
         </div>
        </div>
