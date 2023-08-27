@@ -24,26 +24,32 @@ const Navbar = () => {
   const toggleHamburger = () => {
     sethamburg(!hamburg);
   };
-  useEffect(() => {
-    const updateGreeting = () => {
-      const currentHour = new Date().getHours();
 
-      if (currentHour >= 0 && currentHour < 12) {
-        setGreeting("Günaydın :)");
-      } else if (currentHour >= 12 && currentHour < 18) {
-        setGreeting("İyi Günler :)");
-      } else {
-        setGreeting("İyi Akşamlar :)");
-      }
-    };
  
+    useEffect(() => {
+      const updateGreeting = () => {
+        const currentHour = new Date().getHours();
   
-    updateGreeting();
-
-    const interval = setInterval(updateGreeting, 1000 * 60 * 60); // Her saat başında güncelle
-
-    return () => clearInterval(interval); // Komponent temizlendiğinde aralığı temizlemek için
-  }, []);
+        if (currentHour >= 5 && currentHour < 12) {
+          setGreeting('Günaydın');
+        } else if (currentHour >= 13 && currentHour < 18) {
+          setGreeting('İyi Günler');
+        } else if(currentHour >= 19 && currentHour < 23){
+          setGreeting("iyi akşamlar")
+        } else if(currentHour >= 0 && currentHour < 4){
+            setGreeting("iyi geceler")
+        }else{
+          setGreeting("Hoş Geldiniz")
+        }
+      };
+  
+      updateGreeting();
+  
+      const interval = setInterval(updateGreeting, 1000 * 60 * 60); // Her saat başında güncelle
+  
+      return () => clearInterval(interval); // Komponent temizlendiğinde aralığı temizlemek için
+    }, []);
+  
   return (
     <div className="navbar">
       <div className="logo">

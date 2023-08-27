@@ -5,11 +5,10 @@ const Toggle = () => {
 const updategretin = () => {
   const current = new Date().getHours();
 
-  if (current >= 0 && current <= 12) {
+  if (current >= 5 && current <= 18) {
     return <Sun />;
-  } else if (current >= 12 && current <= 18) {
-    return <Sun />;
-  } else {
+  } 
+  else {
     return <Moon />;
   }
 };
