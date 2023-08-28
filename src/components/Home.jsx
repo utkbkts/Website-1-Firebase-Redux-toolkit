@@ -32,8 +32,7 @@ const Home = () => {
     <>
     <div className='Home-container'>
         <div className='left-home'>
-            <h1>Merhaba,Ben Utku Toygun <br /><span>BEKTASOGLU</span></h1>
-            <h2>FRONT-END DEVELOPER</h2>
+            <h1>Merhaba <br />Ben Utku Toygun <br /><span>BEKTAŞOĞLU</span></h1>
             <span
               style={{
                 fontWeight: "bold",

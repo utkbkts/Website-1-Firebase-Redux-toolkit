@@ -1,7 +1,7 @@
 @media(max-width:762px){
     .Home-container{
         flex-direction: column;
-        height: 120vh;
+        margin-top: 5% !important;
     }
     
     .Home-container button{
@@ -14,7 +14,9 @@
     .grid-container{
         transform: scale(0.8);
     }
-    .right-home{
+    .left-home .btn{
+        width: 100%;
+        transform: scale(0.5) !important;
     }
 }
 @media(max-width:992px){

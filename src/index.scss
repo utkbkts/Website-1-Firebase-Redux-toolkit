@@ -86,7 +86,7 @@ transition: .5s all;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 10px;
-  width: 100%;
+  width: 200px;
   font-weight: bold;
   transition: .5s all;
   &:hover{
@@ -219,9 +219,10 @@ body{
   display: flex;
   max-width: 920px;
   margin: auto;
-  margin-top: 10%;
   animation: name 1s all;
   overflow: hidden;
+  align-items: center;
+  height: 100vh;
   @include animation('fade 1s ');
   .left-home{
     display: flex;
@@ -229,7 +230,7 @@ body{
     align-items: center;
     text-align: center;
     flex: 1;
-    font-size: 24px;
+    font-size: 15px;
 
     a{
       width: 100%;
