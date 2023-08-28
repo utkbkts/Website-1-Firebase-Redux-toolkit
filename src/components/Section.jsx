@@ -25,7 +25,7 @@ const Section = () => {
             <div className='image-background'>
             <img src={logo} alt="" />
             </div>
-            <p><span>F</span>rontend geliştirme konusunda tutkulu ve deneyimli bir profesyonelim. Kullanıcı dostu ve etkileyici web arayüzleri oluşturma konusundaki becerilerimle, kullanıcı deneyimini öncelikli tutarak çeşitli projelerde çalıştım. HTML, CSS ve JavaScript konularında derinlemesine bilgiye sahibim ve modern frontend teknolojilerini yakından takip ediyorum. Problem çözme yeteneğim sayesinde ekip içinde işbirliği yaparak yaratıcı çözümler üretme konusunda başarılıyım.</p>
+            <p><span>F</span>ront-end geliştirme konusunda tutkulu ve deneyimli bir profesyonelim. Kullanıcı dostu ve etkileyici web arayüzleri oluşturma konusundaki becerilerimle, kullanıcı deneyimini öncelikli tutarak çeşitli projelerde çalıştım. HTML, CSS ve JavaScript konularında derinlemesine bilgiye sahibim ve modern frontend teknolojilerini yakından takip ediyorum. Problem çözme yeteneğim sayesinde ekip içinde işbirliği yaparak yaratıcı çözümler üretme konusunda başarılıyım.</p>
         </div>
     </div>
   )
