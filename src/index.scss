@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 html {
   scroll-behavior: smooth;
@@ -79,7 +80,7 @@ transition: .5s all;
 }
 .btn{
   padding: 10px 15px;
-  color: white;
+    -webkit-text-fill-color: black;
   background: orange;
   border: none;
   outline: none;
@@ -230,6 +231,9 @@ body{
     align-items: center;
     text-align: center;
     flex: 1;
+    background: linear-gradient(to bottom, #194c33,#bbb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 22px;
     a{
       width: 100%;
@@ -841,4 +845,3 @@ flex-direction: column;
   }
   
 }
-
