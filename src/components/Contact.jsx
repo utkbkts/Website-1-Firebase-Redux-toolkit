@@ -41,6 +41,8 @@ const Contact = () => {
 
   return (
     <div className='contact-form'>
+       <h2>İletişim</h2>
+        <div className='cizgi'></div>
       <form onSubmit={handleSubmit}>
         <textarea
           value={text}

@@ -665,12 +665,27 @@ flex-direction: column;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2{
+    color: orange;
+  }
+  .cizgi{
+      width: 100px;
+      height: 2px;
+      background-color: #dedede;
+      margin-top: 3%;
+    }
+
 
   form{
     display: flex;
     align-items: start;
     flex-direction: column;
     gap: 10px;
+    margin-top: 5%;
     textarea{
       width: 600px;
       height: 300px;
