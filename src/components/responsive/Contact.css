@@ -1,6 +1,11 @@
 @media(max-width:630px){
     .contact-form{
         width: 100% !important;
+
+    
+    }
+    .contact-form form{
+        width: 100% !important;
     }
     .contact-form textarea{
         width: 100% !important;
