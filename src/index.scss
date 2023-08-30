@@ -689,9 +689,8 @@ flex-direction: column;
     gap: 10px;
     margin-top: 5%;
     textarea{
-    width: 100%; /* Ekran genişliğine sığacak şekilde */
-  max-width: 600px; /* En fazla 600px genişliğinde olacak */
-  height: 150px; /* Daha düşük bir yükseklik */
+    width: 600px; /* Ekran genişliğine sığacak şekilde */
+  height: 250px; /* Daha düşük bir yükseklik */
   resize: vertical; /* Sadece dikey boyutun ayarlanmasına izin ver */
   padding: 10px;
   outline: none;
