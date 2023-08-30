@@ -10,12 +10,12 @@
     .contact-form textarea{
         width: 100% !important;
     }
-    .contact-form button{
+    .contact-form form button{
         font-size: 13px !important;
     }
 }
 @media(max-width:762px){
-    .contact-form button{
+    .contact-form form button{
         font-size: 13px !important;
     }
 }

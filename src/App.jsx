@@ -11,7 +11,6 @@ import About from "./components/About";
 import Portfoy from "./components/Portfoy";
 function App() {
   const { scrollYProgress } = useScroll();
-
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -22,7 +21,7 @@ function App() {
     <div className="container">
       <div className="example">
         <motion.div style={{ scaleX }} className="progress-bar" />
-        <AnimatePresence mode="wait">
+        <AnimatePresence   mode="wait">
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />

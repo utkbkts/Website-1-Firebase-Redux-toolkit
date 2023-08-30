@@ -36,11 +36,11 @@ const Login = () => {
   <div className='login-box'>
           <h2>Giriş Sayfası</h2>
       <form onSubmit={handlesubmit}>
-      <div class="user-box">
+      <div className="user-box">
       <input value={email} onChange={(e)=>setemail(e.target.value)} type="text" name="" required=""/>
       <label>Email</label>
     </div>
-    <div class="user-box">
+    <div className="user-box">
       <input value={password} onChange={(e)=>setpassword(e.target.value)} type="password" name="" required=""/>
       <label>Parola</label>
     </div>
