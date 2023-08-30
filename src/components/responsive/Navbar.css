@@ -3,7 +3,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    top: 80px;
+    top: 10%;
     left: 0;
     text-align: center;
     align-items: center;
@@ -29,7 +29,6 @@
 
   .navbar ul li a,button{
     color: white !important;
-    font-size: 30px !important;
   }
   .navbar .register,.login{
     border: 1px solid rgb(172, 177, 164);

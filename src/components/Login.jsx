@@ -34,6 +34,7 @@ const Login = () => {
   },[user,isLoading,isError,isSuccess,message,navigate,dispatch])
   return (
   <div className='login-box'>
+      <div className="login-box-content">
           <h2>Giriş Sayfası</h2>
       <form onSubmit={handlesubmit}>
       <div className="user-box">
@@ -52,6 +53,7 @@ const Login = () => {
       <button className='buttons' type='submit'>Giriş Yap</button>
     </a>
     </form>
+    </div>
   </div>
   )
 }

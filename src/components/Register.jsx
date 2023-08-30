@@ -38,7 +38,8 @@ const Register = () => {
   },[user,isLoading,isError,isSuccess,message,navigate,dispatch])
   return (
     <div className='login-box'>
-          <h2>Üyelik Sayfası</h2>
+      <div className="login-box-content">
+      <h2>Üyelik Sayfası</h2>
       <form onSubmit={handlesubmit}>
       <div className="user-box">
       <input value={displayName} onChange={(e)=>setdisplayName(e.target.value)} type="text" name="" required=""/>
@@ -60,6 +61,7 @@ const Register = () => {
       <button className='buttons' type='submit'>Üye ol</button>
     </a>
     </form>
+      </div>
   </div>
   )
 }
