@@ -689,14 +689,15 @@ flex-direction: column;
     gap: 10px;
     margin-top: 5%;
     textarea{
-      width: 600px;
-      height: 300px;
-      resize: none;
-      padding: 10px;
-      outline: none;
-      border-radius: 4px;
-      font-size: 16px;
-      font-weight: bold;
+    width: 100%; /* Ekran genişliğine sığacak şekilde */
+  max-width: 600px; /* En fazla 600px genişliğinde olacak */
+  height: 150px; /* Daha düşük bir yükseklik */
+  resize: vertical; /* Sadece dikey boyutun ayarlanmasına izin ver */
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
     }
     button{
       padding:15px 30px;
