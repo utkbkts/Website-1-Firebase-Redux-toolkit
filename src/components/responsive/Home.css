@@ -3,7 +3,10 @@
         flex-direction: column;
         margin-top: 5% !important;
     }
-    
+    .left-home{
+        font-size: 15px !important;
+    margin-top: 10% !important;
+    }
     .Home-container button{
         transform: scale(0.5);
     }
