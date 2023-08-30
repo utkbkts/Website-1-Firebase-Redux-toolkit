@@ -8,7 +8,7 @@ const Contact = () => {
   const [text, setText] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     
 
     if (text.trim() === "") {
