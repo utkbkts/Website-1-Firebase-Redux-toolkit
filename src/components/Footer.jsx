@@ -53,7 +53,7 @@ useEffect(() => {
         <div className='container-footer'>
             <div className='baslik-footer'>
                 <h3>
-                    Sayfa Hakkındaki Düşüncelerini Yaz...Mesajları göremiyorsan (gönder) tuşuna bas <span>(üye olmadan yorum yapamazsın)</span>
+                    Sayfa Hakkındaki Düşüncelerini Yaz...<span>(üye olmadan yorum yapamazsın)</span>
                 </h3>
             </div>
             <div className='messagealani'>
