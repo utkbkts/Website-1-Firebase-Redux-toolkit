@@ -11,7 +11,6 @@ import About from "./components/About";
 import Portfoy from "./components/Portfoy";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import Admin from "./components/admin/Admin";
 import Notfound from "./components/Notfound";
 function App() {
   const { scrollYProgress } = useScroll();
@@ -37,7 +36,6 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/portfoy" element={<Portfoy />} />
-              <Route path="/admin" element={<Admin />} />
               <Route path="*" element={<Notfound/>} />
             </Routes>
           <ToastContainer position="top-right" />
