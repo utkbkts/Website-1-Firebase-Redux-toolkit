@@ -4,6 +4,7 @@ import authservice from "./Authservice.jsx"
 const user = JSON.parse(localStorage.getItem("user"))
 const initialState={
     user:user ? user:null,
+    yonetici:null,
     isLoading:false,
     isSuccess:false,
     isError:false,

@@ -1,6 +1,5 @@
 import {auth} from "../firebase/config"
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,signOut} from "firebase/auth"
-
 const register=async(email,password,name)=>{
     const userResponse = await createUserWithEmailAndPassword(auth,email,password)
 
@@ -23,6 +22,7 @@ const login = async (email,password)=>{
     return userresponse.user
 }
 
+
 const logout=async()=>{
     await signOut(auth)
     localStorage.removeItem("user")
@@ -31,7 +31,8 @@ const logout=async()=>{
 const authservice={
     register,
     login,
-    logout
+    logout,
+
 }
 
 export default authservice
