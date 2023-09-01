@@ -8,8 +8,8 @@ const Contact = () => {
   const [text, setText] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async () => {
-
+  const handleSubmit = async (e) => {
+  e.preventDefault()
     if (text.trim() === "") {
       return toast.error("Boş mesaj gönderilemez");
     }
