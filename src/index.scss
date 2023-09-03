@@ -235,6 +235,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 22px;
+  @include animation('fade 3s ');
     a{
       width: 100%;
     }
@@ -248,7 +249,7 @@ body{
   .right-home{
     flex: 1;
     position: relative;
-
+    @include animation('fade 4s ');
     .swiper {
       width: 300px;
       height: 300px;
