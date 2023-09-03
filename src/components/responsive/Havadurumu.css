@@ -1,0 +1,8 @@
+@media(max-width:768px){
+    .havadurumu-container{
+        justify-content: center;
+    }
+    .havadurumu-content{
+        justify-content: center;
+    }
+}

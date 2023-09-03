@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BsFillCloudSunFill } from "react-icons/bs";
+import "./responsive/Havadurumu.css"
 const Havadurumu = () => {
   const key = "4e6cba2969f6819c1c9071385bec5ad6";
   const fetchapi = `https://api.openweathermap.org/data/2.5/weather?q=İstanbul&appid=${key}&units=metric&lang=tr`;
