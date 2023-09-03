@@ -8,7 +8,7 @@ const Section = () => {
     useEffect(() => {
       const handleScroll = () => {
         setScrollX(window.scrollX);
-        setIsScrolled(window.scrollY < 600); // Scroll pozisyonuna göre isScrolled değerini güncelle
+        setIsScrolled(window.scrollY < 1700); // Scroll pozisyonuna göre isScrolled değerini güncelle
         //scroll 400px olunca true olmazsa false true olursa active classını ekler 400 den küçük olursa true
       };
   

@@ -5,7 +5,7 @@ const Alintilar = () => {
 
     useEffect(() => {
       const handlescroll = () => {
-        setIsScrolled(window.scrollY < 1400);
+        setIsScrolled(window.scrollY < 2500);
       };
   
       window.addEventListener("scroll", handlescroll);
