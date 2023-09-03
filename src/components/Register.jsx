@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { register, reset } from "../auth/Authslice";
 import { toast } from "react-toastify";
 import Transition from "./Transition";
+import { logingoogle } from "../auth/Googleslice";
 const Register = () => {
   const [displayName, setdisplayName] = useState("");
   const [email, setemail] = useState("");
@@ -13,6 +14,8 @@ const Register = () => {
   const { user, isLoading, message, isSuccess, isError } = useSelector(
     (state) => state.auth
   );
+  const {kullanici} = useSelector((state) => state.kullaniciState);
+
   const validateDisplayName = (value) => {
     const hasSpecialCharacters = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(value);
     return hasSpecialCharacters;
@@ -43,17 +46,26 @@ const Register = () => {
       toast.error("Bir Hata Oluştu.");
     }
 
-    if (isSuccess || user) {
+    if (isSuccess || user || kullanici) {
       navigate("/");
     }
     if (isLoading === false) {
       dispatch(reset());
     }
-  }, [user, isLoading, isError, isSuccess, message, navigate, dispatch]);
+  }, [user, isLoading, isError, isSuccess, message, navigate, dispatch,kullanici]);
+
+const handlegooglegiris=(e)=>{
+  e.preventDefault()
+  dispatch(logingoogle())
+}
+
   return (
     <div className="login-box">
       <div className="login-box-content">
         <h2>Üyelik Sayfası</h2>
+        <div className="login-google">
+        <button onClick={handlegooglegiris}>Google ile Giriş Yap</button>
+      </div>
         <form onSubmit={handlesubmit}>
           <div className="user-box">
             <input

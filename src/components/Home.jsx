@@ -11,6 +11,7 @@ import Footer from './Footer';
 import Alintilar from './Alintilar';
 import "./responsive/Home.css"
 import Social from './Social';
+import Havadurumu from './Havadurumu';
 const Home = () => {
 
     const [text] = useTypewriter({
@@ -79,6 +80,7 @@ const Home = () => {
       </Swiper>
         </div>
     </div>
+    <Havadurumu/>
     <Section/>
     <Alintilar/>
     <Footer/>

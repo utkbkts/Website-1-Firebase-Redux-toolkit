@@ -58,9 +58,9 @@ useEffect(() => {
             </div>
             <div className='messagealani'>
           {messages.map(message=>(
-            <div>
-            <div className='footer-tarih'>
-                      <span>{message.user}</span>
+            <div key={message.id}>
+            <div className='footer-tarih' >
+                      <span >{message.user}</span>
                         {message.timestamp ? (
         <span>{moment(message.timestamp.toDate()).locale('tr').format('L')}</span>
       ) : null}

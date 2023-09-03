@@ -1,5 +1,8 @@
-import {auth} from "../firebase/config"
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,signOut} from "firebase/auth"
+import {collection,query,where,getDocs} from "firebase/firestore"
+import { auth,db } from "../firebase/config"
+
+
 const register=async(email,password,name)=>{
     const userResponse = await createUserWithEmailAndPassword(auth,email,password)
 
@@ -14,7 +17,6 @@ const register=async(email,password,name)=>{
 }
 const login = async (email,password)=>{
     const userresponse = await signInWithEmailAndPassword(auth,email,password);
-
     if(userresponse.user){
         localStorage.setItem("user",JSON.stringify(userresponse.user))
     }
@@ -26,6 +28,7 @@ const login = async (email,password)=>{
 const logout=async()=>{
     await signOut(auth)
     localStorage.removeItem("user")
+    localStorage.removeItem("kullanici")
 }
 
 const authservice={

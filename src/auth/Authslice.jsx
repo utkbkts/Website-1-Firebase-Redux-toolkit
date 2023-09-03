@@ -32,6 +32,7 @@ export const login = createAsyncThunk("auth/login",async(user,thunkAPI)=>{
     }
 })
 
+
 export const logout = createAsyncThunk("auth/logout",async(_,thunkAPI)=>{
     try {
       await authservice.logout()
@@ -86,6 +87,7 @@ export const logout = createAsyncThunk("auth/logout",async(_,thunkAPI)=>{
             state.message = action.payload;
             state.user = null;
           })
+
           //logout
           .addCase(logout.pending, (state) => {
             state.isLoading = true;
@@ -101,7 +103,8 @@ export const logout = createAsyncThunk("auth/logout",async(_,thunkAPI)=>{
             state.isError = true;
             state.message = action.payload;
             state.user = null;
-          });
+          })
+         
     }
   })
   export const { reset } = Authslice.actions;

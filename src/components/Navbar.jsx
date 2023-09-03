@@ -10,7 +10,7 @@ const Navbar = () => {
   const { isLoading, user } = useSelector((state) => state.auth);
   const [greeting, setGreeting] = useState("");
   const [hamburg,sethamburg]=useState(false)
-
+  const {kullanici} = useSelector((state) => state.kullaniciState);
   const dispatch=useDispatch()
   const navigate=useNavigate()
   const onlogout = async () => {
@@ -24,7 +24,6 @@ const Navbar = () => {
   const toggleHamburger = () => {
     sethamburg(!hamburg);
   };
-
  
     useEffect(() => {
       const updateGreeting = () => {
@@ -70,10 +69,10 @@ const Navbar = () => {
         <li>
           <Link  onClick={closeNavbar}  to="/about">Hakkımda</Link>
         </li>
-        {user ? (
+        {user || kullanici ? (
           <>
             <li className="exit-gap">
-              <span>Hoş Geldin, {user.displayName}</span>
+              <span>Hoş Geldin, {user?.displayName || kullanici?.displayName}</span>
               <button  className="exit" onClick={onlogout}>Çıkış</button>
             </li>
           </>

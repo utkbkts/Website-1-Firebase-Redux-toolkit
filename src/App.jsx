@@ -9,8 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Portfoy from "./components/Portfoy";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import Notfound from "./components/Notfound";
 function App() {
   const { scrollYProgress } = useScroll();
@@ -19,7 +17,6 @@ function App() {
     damping: 30,
     restDelta: 0.001,
   });
-
 
   return (
     <BrowserRouter>

@@ -9,7 +9,7 @@ const Login = () => {
   const [password,setpassword]=useState("")
   const navigate=useNavigate()
   const dispatch=useDispatch()
-  const {user,isLoading,message,isSuccess,isError}=useSelector((state)=>state.auth)
+  const {user,isLoading,message,isSuccess,isError,yonetici}=useSelector((state)=>state.auth)
   const handlesubmit=(e)=>{
     e.preventDefault()
 
@@ -32,6 +32,8 @@ const Login = () => {
       dispatch(reset())
     }
   },[user,isLoading,isError,isSuccess,message,navigate,dispatch])
+
+ 
   return (
   <div className='login-box'>
       <div className="login-box-content">
