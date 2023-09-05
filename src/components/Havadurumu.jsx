@@ -15,7 +15,6 @@ const Havadurumu = () => {
     fetch(fetchapi)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setWeatherData(data)
       });
   }, []);
@@ -23,7 +22,6 @@ const Havadurumu = () => {
     fetch(fetchapi2)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setWeatherData2(data)
       });
   }, []);
@@ -31,7 +29,6 @@ const Havadurumu = () => {
     fetch(fetchapi3)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setWeatherData3(data)
       });
   }, []);
@@ -39,7 +36,6 @@ const Havadurumu = () => {
     fetch(fetchapi4)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         setWeatherData4(data)
       });
   }, []);
