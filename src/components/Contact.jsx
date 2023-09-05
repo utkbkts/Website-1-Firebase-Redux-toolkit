@@ -6,6 +6,7 @@ import Transition from './Transition';
 import "../components/responsive/Contact.css"
 const Contact = () => {
   const [text, setText] = useState("");
+  const [name, setname] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -23,13 +24,15 @@ const Contact = () => {
 
     try {
       const docRef = await addDoc(collection(db, "formmesaj"), {
-        text
+        text,
+        name
       });
 
       localStorage.setItem("lastsubmission", Date.now());
       toast.success("Mesajınız başarıyla gönderildi");
       setIsSubmitted(true);
       setText("");
+      setname("");
     } catch (error) {
       toast.error("Mesaj gönderilirken bir hata oluştu", error);
     }
@@ -43,7 +46,9 @@ const Contact = () => {
        <h2>İletişim</h2>
         <div className='cizgi'></div>
       <form onSubmit={handleSubmit}>
+        <input placeholder='isminiz' required className='name' type="text" value={name}  onChange={(e)=>setname(e.target.value)}/>
         <textarea
+        required
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder='Mesajınızı giriniz'

@@ -713,6 +713,13 @@ flex-direction: column;
   justify-content: center;
   flex-direction: column;
   margin-top: 5%;
+
+  .name{
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+  }
   h2{
     color: orange;
   }
