@@ -1,19 +1,22 @@
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,signOut} from "firebase/auth"
-import {collection,query,where,getDocs} from "firebase/firestore"
-import { auth,db } from "../firebase/config"
+import { auth, db, storage  } from "../firebase/config"
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
+import { doc, setDoc } from "firebase/firestore"
 
 
-const register=async(email,password,name)=>{
+const register=async(email,password,name,thumbnail)=>{
     const userResponse = await createUserWithEmailAndPassword(auth,email,password)
 
     if(userResponse.user){
         await updateProfile(userResponse.user,{
-            displayName:name
+            displayName:name,
+            photoURL:photoURL,
         })
 
         localStorage.setItem("user",JSON.stringify(userResponse.user))
     }
-    return userResponse.user
+
+ 
 }
 const login = async (email,password)=>{
     const userresponse = await signInWithEmailAndPassword(auth,email,password);

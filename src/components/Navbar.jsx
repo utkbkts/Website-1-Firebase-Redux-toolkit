@@ -24,7 +24,10 @@ const Navbar = () => {
   const toggleHamburger = () => {
     sethamburg(!hamburg);
   };
- 
+  
+  const handlekullanici=()=>{
+    navigate("/kullanici");
+  }
     useEffect(() => {
       const updateGreeting = () => {
         const currentHour = new Date().getHours();
@@ -74,6 +77,7 @@ const Navbar = () => {
             <li className="exit-gap">
               <span>Hoş Geldin, {user?.displayName || kullanici?.displayName}</span>
               <button  className="exit" onClick={onlogout}>Çıkış</button>
+              <button  className="exit" onClick={handlekullanici}>Profil</button>
             </li>
           </>
         ) : (

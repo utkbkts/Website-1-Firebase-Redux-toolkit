@@ -21,6 +21,7 @@ export const register = createAsyncThunk("auth/register",async(user,thunkAPI)=>{
     }
 })
 
+
 //Giriş işlemi
 
 export const login = createAsyncThunk("auth/login",async(user,thunkAPI)=>{
@@ -104,6 +105,7 @@ export const logout = createAsyncThunk("auth/logout",async(_,thunkAPI)=>{
             state.message = action.payload;
             state.user = null;
           })
+          //PHOTO
          
     }
   })
