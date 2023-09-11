@@ -4,7 +4,7 @@ import {getAuth} from "firebase/auth"
 import {getFirestore} from "firebase/firestore"
 import { getStorage } from "firebase/storage";
 const firebaseConfig = {
-  apiKey: "AIzaSyBDkZICqLklZO3aUAA9FAcGuyM2JhvGO0U",
+  apiKey: "Your-KEY",
   authDomain: "mywebsite-a00ae.firebaseapp.com",
   databaseURL: "https://mywebsite-a00ae-default-rtdb.firebaseio.com",
   projectId: "mywebsite-a00ae",
